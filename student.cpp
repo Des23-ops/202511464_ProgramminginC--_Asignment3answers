@@ -1,11 +1,12 @@
+// including the header file, exact way we named it
 #include "student.h"
 
-Student students[100];
+Student students[10];
 int totalStudents = 0;
 
 void addStudent()
 {
-    cout << "\nEnter Student ID: ";
+    cout << "Input Student's ID: ";
     cin >> students[totalStudents].id;
 
     cin.ignore();
@@ -30,7 +31,7 @@ void displayStudents()
 {
     if (totalStudents == 0)
     {
-        cout << "\nNo students available.\n";
+        cout << "no students available."<<endl;
         return;
     }
 
@@ -112,7 +113,6 @@ void updateStudent()
         cout << "Student Not Found.\n";
     }
 }
-
 void deleteStudent()
 {
     int id;
@@ -129,7 +129,6 @@ void deleteStudent()
             {
                 students[j] = students[j + 1];
             }
-
             totalStudents--;
 
             cout << "Student Deleted Successfully!\n";
@@ -141,6 +140,6 @@ void deleteStudent()
 
     if (!found)
     {
-        cout << "Student Not Found.\n";
+        cout << " The student is not Found.\n";
     }
 }
