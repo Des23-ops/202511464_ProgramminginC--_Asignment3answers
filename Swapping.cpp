@@ -7,7 +7,7 @@ void swappingNumbers(int *x, int *y)
 // created c as a variable for hold temporary the value of one variable at a time, for swapping to work out
 int c = *x;
 *x = *y;
-*y = temp;
+*y = c;
 }
 
 int main()
